@@ -1,3 +1,7 @@
+output "dev_center_project_pools_id" {
+  description = "Map of id values across all dev_center_project_pools, keyed the same as var.dev_center_project_pools"
+  value       = { for k, v in azurerm_dev_center_project_pool.dev_center_project_pools : k => v.id }
+}
 output "dev_center_project_pools_dev_box_definition_name" {
   description = "Map of dev_box_definition_name values across all dev_center_project_pools, keyed the same as var.dev_center_project_pools"
   value       = { for k, v in azurerm_dev_center_project_pool.dev_center_project_pools : k => v.dev_box_definition_name }
