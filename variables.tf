@@ -23,7 +23,7 @@ EOT
     location                                = string
     name                                    = string
     managed_virtual_network_regions         = optional(list(string))
-    single_sign_on_enabled                  = optional(bool) # Default: false
+    single_sign_on_enabled                  = optional(bool)
     stop_on_disconnect_grace_period_minutes = optional(number)
     tags                                    = optional(map(string))
   }))
